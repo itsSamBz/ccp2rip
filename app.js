@@ -163,6 +163,6 @@ elCCP.addEventListener('input', calculate, { passive: true });
 document.getElementById('langToggle').addEventListener('click', updateTranslations);
 setupCopyButtons();
 // Demo: prefill example so you can see it works
-elCCP.value = '20392294';
+elCCP.value = '';
 calculate();
 document.getElementById('notice').textContent = translations[currentLang].notice;
