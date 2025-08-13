@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>CCP → Clé CCP & RIP (Algérie Poste)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body style="background-color: #0b1220;">
+    <div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
+        <div class="row w-100 justify-content-center">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+                <div class="text-center mb-4">
+                    <svg width="80" height="80" class="mb-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 5.56006H22" stroke="#9985ff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M14.22 2H19.78C21.56 2 22 2.44 22 4.2V8.31C22 10.07 21.56 10.51 19.78 10.51H14.22C12.44 10.51 12 10.07 12 8.31V4.2C12 2.44 12.44 2 14.22 2Z" stroke="#9985ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M2 17.0601H12" stroke="#9985ff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M4.22 13.5H9.78C11.56 13.5 12 13.94 12 15.7V19.81C12 21.57 11.56 22.01 9.78 22.01H4.22C2.44 22.01 2 21.57 2 19.81V15.7C2 13.94 2.44 13.5 4.22 13.5Z" stroke="#9985ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="0.4" d="M22 15C22 18.87 18.87 22 15 22L16.05 20.25" stroke="#9985ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="0.4" d="M2 9C2 5.13 5.13 2 9 2L7.95001 3.75" stroke="#9985ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    <h1 class="h4 mb-3">CCP Number Calculator (Algérie Poste)</h1>
+                    <button id="langToggle" class="btn btn-outline-light btn-sm">العربية</button>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="ccp" class="form-label">Numéro CCP (chiffres uniquement)</label>
+                            <div class="input-group">
+                                <input id="ccp" type="text" class="form-control" inputmode="numeric" autocomplete="off" placeholder="ex. 20392294" />
+                                <button class="btn btn-outline-secondary copy-btn mx-2 rounded-3" id="copy-ccp" type="button">
+                                    <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" d="m16.58 4.747-.88-.962A5.5 5.5 0 0 0 11.644 2H7.5A5.5 5.5 0 0 0 2 7.5V14c0 2.761 1.739 5 4.5 5"></path><path d="M6 10.5A5.5 5.5 0 0 1 11.5 5h5a5.5 5.5 0 0 1 5.5 5.5v6a5.5 5.5 0 0 1-5.5 5.5h-5A5.5 5.5 0 0 1 6 16.5z"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <div class="result-card">
+                                    <div class="k">Clé CCP</div>
+                                    <div class="v mono d-flex justify-content-between align-items-center">
+                                        <span id="cle-ccp">—</span>
+                                        <button class="btn btn-sm btn-outline-secondary copy-btn" id="copy-cle-ccp" type="button">
+                                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" d="m16.58 4.747-.88-.962A5.5 5.5 0 0 0 11.644 2H7.5A5.5 5.5 0 0 0 2 7.5V14c0 2.761 1.739 5 4.5 5"></path><path d="M6 10.5A5.5 5.5 0 0 1 11.5 5h5a5.5 5.5 0 0 1 5.5 5.5v6a5.5 5.5 0 0 1-5.5 5.5h-5A5.5 5.5 0 0 1 6 16.5z"></path></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="result-card">
+                                    <div class="k">Clé RIP</div>
+                                    <div class="v mono d-flex justify-content-between align-items-center">
+                                        <span id="cle-rip">—</span>
+                                        <button class="btn btn-sm btn-outline-secondary copy-btn" id="copy-cle-rip" type="button">
+                                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" d="m16.58 4.747-.88-.962A5.5 5.5 0 0 0 11.644 2H7.5A5.5 5.5 0 0 0 2 7.5V14c0 2.761 1.739 5 4.5 5"></path><path d="M6 10.5A5.5 5.5 0 0 1 11.5 5h5a5.5 5.5 0 0 1 5.5 5.5v6a5.5 5.5 0 0 1-5.5 5.5h-5A5.5 5.5 0 0 1 6 16.5z"></path></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="result-card rip mb-3">
+                            <div class="k">RIP complet</div>
+                            <div class="v mono d-flex justify-content-between align-items-center">
+                                <span id="rip">—</span>
+                                <button class="btn btn-sm btn-outline-secondary copy-btn" id="copy-rip" type="button">
+                                    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" d="m16.58 4.747-.88-.962A5.5 5.5 0 0 0 11.644 2H7.5A5.5 5.5 0 0 0 2 7.5V14c0 2.761 1.739 5 4.5 5"></path><path d="M6 10.5A5.5 5.5 0 0 1 11.5 5h5a5.5 5.5 0 0 1 5.5 5.5v6a5.5 5.5 0 0 1-5.5 5.5h-5A5.5 5.5 0 0 1 6 16.5z"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div id="status" class="hint text-center"></div>
+                    </div>
+                </div>
+
+                <footer class="mt-4">
+                    <p id="notice" class="text-center text-muted small">—</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
