@@ -89,7 +89,7 @@ const translations = {
     formatHint: "التنسيق: ",
     realtime: "✅ حساب فوري",
     error: "⚠️ أدخل 10 أرقام كحد أقصى",
-    notice: "مهم : هذه الحاسبة لا علاقة رسمية مع بريد الجزائر أو أي جهة رسمية أخرى."
+    notice: "هام : هذه الحاسبة ليس لها أي علاقة رسمية مع بريد الجزائر أو أي جهة رسمية أخرى."
   },
   fr: {
     title: "Calculateur de numéro CCP (Algérie Poste)",
